@@ -15,7 +15,8 @@
   | :----: | :------: | :------: |
   | 郑泽阳 | 31901063 | 计算1902 |
 
-- 项目源代码:https://gitee.com/Shylock-patriot/microc
+- 项目源代码:https://github.com/Jenoszz/Microc.git
+- 参考代码：https://gitee.com/sigcc/plzoofs/tree/master/microc
 
 ## 一、项目评价基本情况
 
