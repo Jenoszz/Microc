@@ -1,30 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj": {}
+    "F:\\Github\\Microc\\microcc.fsproj": {}
   },
   "projects": {
-    "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj": {
+    "F:\\Github\\Microc\\microcc.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj",
+        "projectUniqueName": "F:\\Github\\Microc\\microcc.fsproj",
         "projectName": "microcc",
-        "projectPath": "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj",
-        "packagesPath": "C:\\Users\\sixia\\.nuget\\packages\\",
-        "outputPath": "D:\\VS-code\\f#\\myfork\\microc\\obj\\",
+        "projectPath": "F:\\Github\\Microc\\microcc.fsproj",
+        "packagesPath": "C:\\Users\\Jenos\\.nuget\\packages\\",
+        "outputPath": "F:\\Github\\Microc\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
-          "C:\\Users\\sixia\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jenos\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://nuget.cdn.azure.cn/v3/index.json": {}
         },
         "frameworks": {
@@ -41,7 +36,7 @@
             "FSharp.Core": {
               "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
               "target": "Package",
-              "version": "[6.0.1, )",
+              "version": "[6.0.2, )",
               "generatePathProperty": true
             },
             "FsLexYacc": {
@@ -65,7 +60,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
