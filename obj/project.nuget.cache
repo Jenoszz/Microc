@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VKah0t1wn9ApcdURwJYE07x9tfp3yFYUTr5FERgceEWqaTlFmbm6MKHoEfJcPx2V5wsFE/iVK8gEjgg6TpAiMg==",
+  "dgSpecHash": "zp3esZjbWSMkaso9LGZFqRqr+uybWenKb1GiU2Wuu3LE7QdFHJH9idhYV0wwVN+zgCCVJaCutcYrMK1jmEUgOg==",
   "success": true,
-  "projectFilePath": "F:\\microc-master\\microc.fsproj",
+  "projectFilePath": "F:\\Github\\Microc\\interpc.fsproj",
   "expectedPackageFiles": [
     "C:\\Users\\Jenos\\.nuget\\packages\\fsharp.core\\6.0.2\\fsharp.core.6.0.2.nupkg.sha512",
     "C:\\Users\\Jenos\\.nuget\\packages\\fslexyacc\\10.2.0\\fslexyacc.10.2.0.nupkg.sha512",

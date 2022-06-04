@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "F:\\microc-master\\interpc.fsproj": {}
+    "F:\\Github\\Microc\\interpc.fsproj": {}
   },
   "projects": {
-    "F:\\microc-master\\interpc.fsproj": {
+    "F:\\Github\\Microc\\interpc.fsproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\microc-master\\interpc.fsproj",
+        "projectUniqueName": "F:\\Github\\Microc\\interpc.fsproj",
         "projectName": "interpc",
-        "projectPath": "F:\\microc-master\\interpc.fsproj",
+        "projectPath": "F:\\Github\\Microc\\interpc.fsproj",
         "packagesPath": "C:\\Users\\Jenos\\.nuget\\packages\\",
-        "outputPath": "F:\\microc-master\\obj\\",
+        "outputPath": "F:\\Github\\Microc\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Jenos\\AppData\\Roaming\\NuGet\\NuGet.Config"

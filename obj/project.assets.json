@@ -230,11 +230,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\microc-master\\microc.fsproj",
-      "projectName": "microc",
-      "projectPath": "F:\\microc-master\\microc.fsproj",
+      "projectUniqueName": "F:\\Github\\Microc\\interpc.fsproj",
+      "projectName": "interpc",
+      "projectPath": "F:\\Github\\Microc\\interpc.fsproj",
       "packagesPath": "C:\\Users\\Jenos\\.nuget\\packages\\",
-      "outputPath": "F:\\microc-master\\obj\\",
+      "outputPath": "F:\\Github\\Microc\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Jenos\\AppData\\Roaming\\NuGet\\NuGet.Config"
