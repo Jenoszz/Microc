@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/q61JSVFx5o+lxMpUIE5VlIe/2iPaxJgSRqIRGC48m90nJleBAAzBRYVpgze2RoIjsz0bM+X7Q5iqkb9dR86dw==",
+  "dgSpecHash": "fZK/onOKgg4MQfz3HPt8u5LPQx/wfZOkRJWn80RtCSVy6ZCRgNSJf+g//2Pp5V6qfTXncALLIteJKEN+KSsSHQ==",
   "success": true,
-  "projectFilePath": "F:\\Github\\Microc\\microc.fsproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\Jenos\\.nuget\\packages\\fsharp.core\\6.0.2\\fsharp.core.6.0.2.nupkg.sha512",
-    "C:\\Users\\Jenos\\.nuget\\packages\\fslexyacc\\10.2.0\\fslexyacc.10.2.0.nupkg.sha512",
-    "C:\\Users\\Jenos\\.nuget\\packages\\fslexyacc.runtime\\10.2.0\\fslexyacc.runtime.10.2.0.nupkg.sha512"
-  ],
+  "projectFilePath": "F:\\Github\\Microc\\machine.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }

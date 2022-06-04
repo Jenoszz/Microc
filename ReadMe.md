@@ -63,6 +63,8 @@ https://github.com/Jenoszz/Microc.git
 
 ## 二、项目运行命令
 
+
+
 #### 1.解释器
 
 ```bash
@@ -89,144 +91,7 @@ java Machine ./example/ex1.out 3
 
 ## 三、测试
 
-### （一）解释器
-
-#### 1.注释
-
-```c
-// micro-C example 1
-//dotnet run --project interpc.fsproj example/ex1.c 8
-int g ;
-int h[3] ;
-void main(int n) {
-  h[0] = 1;
-  // h[4] = 5;
-  // print h[3]; //数组首地址
-  // print h[4]; //参数 n
-  // h[5] = 5;
-  // h[6] = 5;
-  // h[7] = 5;
-  // h[9] = 5;
-  // h[10] = 5;
-  // h[11] = 5;
-  // h[12] = 5;
-  // 数组越界，程序的行为会异常
-  while (n > 0) {
-    print n;
-    n = n - 1;
-  }
-  println;
-}
-```
-
-运行结果
-![](image/readme/1654341378112.png)
-
-#### 2.while
-
-```c
-//dotnet run --project interpc.fsproj .\example\while.c  8
-void main(int n ) {
-    while(n){
-     print n;
-     n--;
-    }
-}
-```
-
-运行结果
-![](image/readme/1654341433298.png)
-
-
-#### 3.for
-
-```c
-//dotnet run --project interpc.fsproj .\example\for.c  8  
-void main(int n) {
-  int i;
-  for(i=0;i<n;i++){
-    print i;
-  }
-}
-```
-
-运行结果
-![](image/readme/1654341464149.png)
-
-#### 4.dowhile
-
-```c
-//dotnet run --project interpc.fsproj .\example\dowhile.c  8
-void main(int n ) {
-    do{
-     print n;
-     n--;
-    }while(n)
-}
-```
-
-运行结果
-
-![](image/readme/1654341516354.png)
-
-#### 5.+= -= *= /= %=
-
-```c
-//dotnet run --project interpc.fsproj .\example\_+=.c  8  
-void main(int n) {
-  print n;
-  n+=3;
-  print n;
-  n-=4;
-  print n;
-  n*=3;
-  print n;
-  n/=2;
-  print n;
-  n%=2;
-  print n;
-}
-```
-
-运行结果
-![](image/readme/1654341561293.png)
-
-#### 6.i++ i-- ++i --i
-
-```c
-//dotnet run --project interpc.fsproj .\example\nPP.c  8
-void main(int n) {
-  n++;
-  ++n;
-  print n;
-  n=10;
-  n--;
-  --n;
-  print n;
-}
-```
-
-运行结果
-
-![](image/readme/1654341617944.png)
-
-#### 7.三元运算符
-
-```c
-//dotnet run --project interpc.fsproj .\example\3operator.c  8
-void main(int n) {
-  int a;
-  a=n?101:110;
-  print a;
-  println;
-}
-```
-
-运行结果
-
-![](image/readme/1654341651483.png)
-
-### （二）编译器
+### （一）编译器
 
 #### 1.break continue
 
@@ -257,6 +122,7 @@ void main(int n) {
 ![](image/readme/1654343418420.png)
 ![](image/readme/1654343432041.png)
 ![](image/readme/1654343451420.png)
+![](image/readme/1654348346918.png)
 
 ##### （2）continue
 
@@ -407,6 +273,9 @@ void main(int n) {
 ##### (1)测试代码
 
 ```c
+//dotnet clean machine.csproj
+//dotnet build machine.csproj 
+//./bin/Debug/net6.0/machine.exe -t .\example\nPP.out 8
 void main(int n) {
   n++;
   ++n;
@@ -423,6 +292,146 @@ void main(int n) {
 
 ![](image/readme/1654344710115.png)
 ![](image/readme/1654344730526.png)
+![](image/readme/1654348096581.png)
+
+### （二）解释器
+
+#### 1.注释
+
+```c
+// micro-C example 1
+//dotnet run --project interpc.fsproj example/ex1.c 8
+int g ;
+int h[3] ;
+void main(int n) {
+  h[0] = 1;
+  // h[4] = 5;
+  // print h[3]; //数组首地址
+  // print h[4]; //参数 n
+  // h[5] = 5;
+  // h[6] = 5;
+  // h[7] = 5;
+  // h[9] = 5;
+  // h[10] = 5;
+  // h[11] = 5;
+  // h[12] = 5;
+  // 数组越界，程序的行为会异常
+  while (n > 0) {
+    print n;
+    n = n - 1;
+  }
+  println;
+}
+```
+
+运行结果
+![](image/readme/1654341378112.png)
+
+#### 2.while
+
+```c
+//dotnet run --project interpc.fsproj .\example\while.c  8
+void main(int n ) {
+    while(n){
+     print n;
+     n--;
+    }
+}
+```
+
+运行结果
+![](image/readme/1654341433298.png)
+
+
+#### 3.for
+
+```c
+//dotnet run --project interpc.fsproj .\example\for.c  8  
+void main(int n) {
+  int i;
+  for(i=0;i<n;i++){
+    print i;
+  }
+}
+```
+
+运行结果
+![](image/readme/1654341464149.png)
+
+#### 4.dowhile
+
+```c
+//dotnet run --project interpc.fsproj .\example\dowhile.c  8
+void main(int n ) {
+    do{
+     print n;
+     n--;
+    }while(n)
+}
+```
+
+运行结果
+
+![](image/readme/1654341516354.png)
+
+#### 5.+= -= *= /= %=
+
+```c
+//dotnet run --project interpc.fsproj .\example\_+=.c  8  
+void main(int n) {
+  print n;
+  n+=3;
+  print n;
+  n-=4;
+  print n;
+  n*=3;
+  print n;
+  n/=2;
+  print n;
+  n%=2;
+  print n;
+}
+```
+
+运行结果
+![](image/readme/1654341561293.png)
+
+#### 6.i++ i-- ++i --i
+
+```c
+//dotnet run --project interpc.fsproj .\example\nPP.c  8
+void main(int n) {
+  n++;
+  ++n;
+  print n;
+  n=10;
+  n--;
+  --n;
+  print n;
+}
+```
+
+运行结果
+
+![](image/readme/1654341617944.png)
+
+#### 7.三元运算符
+
+```c
+//dotnet run --project interpc.fsproj .\example\3operator.c  8
+void main(int n) {
+  int a;
+  a=n?101:110;
+  print a;
+  println;
+}
+```
+
+运行结果
+
+![](image/readme/1654341651483.png)
+
+
 
 ## 四、项目心得体会
 

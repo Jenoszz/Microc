@@ -1,0 +1,15 @@
+F:\Github\Microc\bin\Debug\net6.0\machine.exe
+F:\Github\Microc\bin\Debug\net6.0\machine.deps.json
+F:\Github\Microc\bin\Debug\net6.0\machine.runtimeconfig.json
+F:\Github\Microc\bin\Debug\net6.0\machine.dll
+F:\Github\Microc\bin\Debug\net6.0\machine.pdb
+F:\Github\Microc\obj\Debug\net6.0\machine.csproj.AssemblyReference.cache
+F:\Github\Microc\obj\Debug\net6.0\machine.GeneratedMSBuildEditorConfig.editorconfig
+F:\Github\Microc\obj\Debug\net6.0\machine.AssemblyInfoInputs.cache
+F:\Github\Microc\obj\Debug\net6.0\machine.AssemblyInfo.cs
+F:\Github\Microc\obj\Debug\net6.0\machine.csproj.CoreCompileInputs.cache
+F:\Github\Microc\obj\Debug\net6.0\machine.dll
+F:\Github\Microc\obj\Debug\net6.0\refint\machine.dll
+F:\Github\Microc\obj\Debug\net6.0\machine.pdb
+F:\Github\Microc\obj\Debug\net6.0\machine.genruntimeconfig.cache
+F:\Github\Microc\obj\Debug\net6.0\ref\machine.dll
