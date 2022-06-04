@@ -1,0 +1,73 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj": {}
+  },
+  "projects": {
+    "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj",
+        "projectName": "microcc",
+        "projectPath": "D:\\VS-code\\f#\\myfork\\microc\\microcc.fsproj",
+        "packagesPath": "C:\\Users\\sixia\\.nuget\\packages\\",
+        "outputPath": "D:\\VS-code\\f#\\myfork\\microc\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\sixia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://nuget.cdn.azure.cn/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "FSharp.Core": {
+              "include": "Runtime, Compile, Build, Native, Analyzers, BuildTransitive",
+              "target": "Package",
+              "version": "[6.0.1, )",
+              "generatePathProperty": true
+            },
+            "FsLexYacc": {
+              "target": "Package",
+              "version": "[10.0.0, )",
+              "generatePathProperty": true
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
