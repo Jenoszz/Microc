@@ -45,7 +45,7 @@ type instr =
     | PRINTC (* print s[sp] as character        *)
     | LDARGS of int (* load command line args on stack *)
     | STOP (* halt the abstract machine       *)
-    | BITNOT                             (* bit operation BITNOT            *)
+    | BITNOT                             (* bit operation BITNOT            *)                          //添加运算
     | BITLEFT                            (* bit operation LEFT SHIFT        *)
     | BITRIGHT                           (* bit operation LEFT SHIFT        *)
     | BITXOR                             (* bit operation XOR               *)
@@ -179,7 +179,7 @@ let CODELDARGS = 24
 [<Literal>]
 let CODESTOP = 25
 
-[<Literal>]
+[<Literal>]                                 //添加
 let CODEBITNOT  = 26;
 
 [<Literal>]
@@ -231,7 +231,7 @@ let makelabenv (addr, labenv) instr =
     | PRINTC -> (addr + 1, labenv)
     | LDARGS m -> (addr + 1, labenv)
     | STOP -> (addr + 1, labenv)
-    | BITNOT         -> (addr+1, labenv)
+    | BITNOT         -> (addr+1, labenv)                                                    //t添加
     | BITLEFT        -> (addr+1, labenv)
     | BITRIGHT       -> (addr+1, labenv)
     | BITXOR         -> (addr+1, labenv)
@@ -273,7 +273,7 @@ let rec emitints getlab instr ints =
     | PRINTC -> CODEPRINTC :: ints
     | LDARGS m -> CODELDARGS :: ints
     | STOP -> CODESTOP :: ints
-    | BITNOT         -> CODEBITNOT :: ints
+    | BITNOT         -> CODEBITNOT :: ints                                              //添加
     | BITLEFT        -> CODEBITLEFT :: ints
     | BITRIGHT       -> CODEBITRIGHT :: ints
     | BITXOR         -> CODEBITXOR :: ints
@@ -333,7 +333,7 @@ let rec decomp ints : instr list =
     | CODELDARGS :: ints_rest -> LDARGS 0 :: decomp ints_rest
     | CODESTOP :: ints_rest -> STOP :: decomp ints_rest
     | CODECSTI :: i :: ints_rest -> CSTI i :: decomp ints_rest
-    | CODEBITNOT :: ints_rest                         ->   BITNOT       :: decomp ints_rest
+    | CODEBITNOT :: ints_rest                         ->   BITNOT       :: decomp ints_rest   //添加
     | CODEBITLEFT :: ints_rest                        ->   BITLEFT       :: decomp ints_rest
     | CODEBITRIGHT :: ints_rest                       ->   BITRIGHT      :: decomp ints_rest
     | CODEBITXOR :: ints_rest                         ->   BITXOR        :: decomp ints_rest

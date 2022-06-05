@@ -268,8 +268,8 @@ let rec exec stmt (locEnv: locEnv) (gloEnv: gloEnv) (store: store) : store =
             else
                 store2 //退出循环返回 环境store2
 
-        loop store
-    | Break -> store
+        loop store               
+    | Break -> store                                                              //加入break和continue
     | Continue -> store
     | Expr e ->
         // _ 表示丢弃e的值,返回 变更后的环境store1
@@ -290,7 +290,7 @@ let rec exec stmt (locEnv: locEnv) (gloEnv: gloEnv) (store: store) : store =
 
     | Return _ -> failwith "return not implemented" // 解释器没有实现 return
     
-    | For (e1, e2, e3, body) ->
+    | For (e1, e2, e3, body) ->                                                 //for实现
         //定义 While循环辅助函数 loop
         let rec loop store1 =
             //求值 循环条件,注意变更环境 store
@@ -305,7 +305,7 @@ let rec exec stmt (locEnv: locEnv) (gloEnv: gloEnv) (store: store) : store =
         let (_, store1) = eval e1 locEnv gloEnv store
         loop store1
 
-    | DoWhile (e, body) ->
+    | DoWhile (e, body) ->                                                     //dowhile实现
         let store1=exec body locEnv gloEnv store 
         //定义 While循环辅助函数 loop
         exec (While(e, body)) locEnv gloEnv store1
@@ -384,7 +384,7 @@ and eval e locEnv gloEnv store : int * store =
             eval e2 locEnv gloEnv store1
     | Call (f, es) -> callfun f es locEnv gloEnv store
 
-    | Prim3 ( e1, e2, e3) -> 
+    | Prim3 ( e1, e2, e3) ->                                                            //实现prim3
         
         let (i1, store1) = eval e1 locEnv gloEnv store
         let (i2, store2) = eval e2 locEnv gloEnv store1

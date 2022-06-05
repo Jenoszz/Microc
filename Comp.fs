@@ -166,13 +166,13 @@ let makeGlobalEnvs (topdecs: topdec list) : VarEnv * FunEnv * instr list =
    * varenv  is the local and global variable environment
    * funEnv  is the global function environment
 *)
-let mutable lablist : label list = []
+let mutable lablist : label list = []   //新增状态列表
 
-let rec headlab labs = 
+let rec headlab labs =                  //取出状态
     match labs with
         | lab :: tr -> lab
         | []        -> failwith "Error: unknown break"
-let rec dellab labs =
+let rec dellab labs =                    //删除状态
     match labs with
         | lab :: tr ->   tr
         | []        ->   []
@@ -191,17 +191,18 @@ let rec cStmt stmt (varEnv: VarEnv) (funEnv: FunEnv) : instr list =
     | While (e, body) ->
         let labbegin = newLabel ()
         let labtest = newLabel ()
-        let labend = newLabel ()
+        let labend = newLabel ()                            //新增标签
         lablist <- [labend; labtest; labbegin]
         [ GOTO labtest; Label labbegin ]
         @ cStmt body varEnv funEnv
           @ [ Label labtest ]
             @ cExpr e varEnv funEnv @ [ IFNZRO labbegin; Label labend ]
+                                                            //break功能
     | Break -> 
     //     let labend = newLabel ()
         let labend = headlab lablist
         [GOTO labend]
-//continue功能解读
+                                                        //continue功能解读
     | Continue -> 
     //     // let labbegin = newLabel ()
         let lablist   = dellab lablist
@@ -249,7 +250,7 @@ and cExpr (e: expr) (varEnv: VarEnv) (funEnv: FunEnv) : instr list =
         cAccess acc varEnv funEnv
         @ cExpr e varEnv funEnv @ [ STI ]
     | CstI i -> [ CSTI i ]
-    | CstF f -> 
+    | CstF f ->                                             //float32部分 
         let bytes = System.BitConverter.GetBytes(float32(f))
         let v = System.BitConverter.ToInt32(bytes, 0)
         [ CSTI v ]
@@ -260,7 +261,7 @@ and cExpr (e: expr) (varEnv: VarEnv) (funEnv: FunEnv) : instr list =
            | "!" -> [ NOT ]
            | "printi" -> [ PRINTI ]
            | "printc" -> [ PRINTC ]
-           | "~" -> [ BITNOT ]
+           | "~" -> [ BITNOT ]                                    // 取反
            | _ -> raise (Failure "unknown primitive 1"))
     | Prim2 (ope, e1, e2) ->
         cExpr e1 varEnv funEnv
@@ -277,7 +278,7 @@ and cExpr (e: expr) (varEnv: VarEnv) (funEnv: FunEnv) : instr list =
              | ">=" -> [ LT; NOT ]
              | ">" -> [ SWAP; LT ]
              | "<=" -> [ SWAP; LT; NOT ]
-             | "<<" -> [ BITLEFT ]
+             | "<<" -> [ BITLEFT ]              //特殊运算
              | "^" -> [ BITXOR ]
              | "|" -> [ BITOR ]
              | _ -> raise (Failure "unknown primitive 2"))

@@ -51,11 +51,12 @@
 #define PRINTC 23
 #define LDARGS 24
 #define STOP 25
-#define BITNOT 26
+#define BITNOT 26                               //定义特殊运算
 #define BITLEFT 27
 #define BITRIGHT 28
 #define BITXOR 29
 #define BITOR 30
+
 #define STACKSIZE 1000
 
 // Print the stack machine instruction at p[pc]
@@ -103,7 +104,7 @@ void printInstruction(int p[], int pc)
   case STI:
     printf("STI");
     break;
-  case GETBP:
+  case GETBP:   
     printf("GETBP");
     break;
   case GETSP:
@@ -142,7 +143,7 @@ void printInstruction(int p[], int pc)
   case STOP:
     printf("STOP");
     break;
-  case BITNOT: 
+  case BITNOT:                                                  //添加
         printf("BITNOT");
         break;
   case BITLEFT: 
@@ -339,7 +340,7 @@ int execcode(int p[], int s[], int iargs[], int iargc, int /* boolean */ trace)
     break;
     case STOP:
       return 0;
-    case BITLEFT: 
+    case BITLEFT:                    //实现代码
           s[sp-1] = s[sp-1] << s[sp]; sp--; break;
     case BITRIGHT: 
           s[sp-1] = s[sp-1] >> s[sp]; sp--; break;
